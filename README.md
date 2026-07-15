@@ -1,14 +1,12 @@
-# VaultIQ — AI Banking Intelligence Platform
+# Fintel — AI Banking Intelligence Platform
 
 > Full-stack AI platform for financial institutions — fraud detection, credit underwriting, AML screening, regulatory compliance, risk stress testing, treasury management, customer intelligence, document AI, and automated report generation.
 
-**Live App:** https://vaultiq-frontend-mss2riltwa-uc.a.run.app
-
 ---
 
-## What Is VaultIQ?
+## What Is Fintel?
 
-VaultIQ is an AI-powered banking operating system that brings together multiple intelligence modules under one platform. It replaces hours of manual analyst work with real-time AI decisions — scoring transactions for fraud in milliseconds, underwriting loan applications instantly, screening customers against AML/KYC watchlists, and drafting regulatory filings like SARs and CTRs in seconds.
+Fintel is an AI-powered banking operating system that brings together multiple intelligence modules under one platform. It replaces hours of manual analyst work with real-time AI decisions — scoring transactions for fraud in milliseconds, underwriting loan applications instantly, screening customers against AML/KYC watchlists, and drafting regulatory filings like SARs and CTRs in seconds.
 
 Each module is powered by a LangGraph agent pipeline backed by Groq's LLaMA 3.3 70B model, with XGBoost ML models for fraud and credit scoring.
 
@@ -145,7 +143,7 @@ ai-banking-platform/
 
 ### Gateway base URL
 ```
-https://vaultiq-gateway-mss2riltwa-uc.a.run.app/api
+http://localhost:3001/api   # or your deployed gateway URL
 ```
 
 | Method | Endpoint | Description |
@@ -219,22 +217,17 @@ npm run dev                     # → http://localhost:5173
 ```bash
 # AI Services
 cd backend/ai-services
-gcloud run deploy vaultiq-ai --source . --project vaultiq-ai-banking --region us-central1 --allow-unauthenticated
+gcloud run deploy fintel-ai --source . --project your-gcp-project --region us-central1 --allow-unauthenticated
 
 # API Gateway
 cd backend/api-gateway
-gcloud run deploy vaultiq-gateway --source . --project vaultiq-ai-banking --region us-central1 --allow-unauthenticated
+gcloud run deploy fintel-gateway --source . --project your-gcp-project --region us-central1 --allow-unauthenticated
 
 # Frontend
 cd frontend
 npm run build
-gcloud run deploy vaultiq-frontend --source . --project vaultiq-ai-banking --region us-central1 --allow-unauthenticated
+gcloud run deploy fintel-frontend --source . --project your-gcp-project --region us-central1 --allow-unauthenticated
 ```
-
-**Live service URLs:**
-- Frontend: `https://vaultiq-frontend-mss2riltwa-uc.a.run.app`
-- Gateway: `https://vaultiq-gateway-mss2riltwa-uc.a.run.app`
-- AI Services: `https://vaultiq-ai-mss2riltwa-uc.a.run.app`
 
 ---
 
