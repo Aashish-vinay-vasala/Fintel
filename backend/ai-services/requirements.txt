@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+python-multipart
+langchain
+langgraph
+langchain-groq
+langchain-community
+langchain-core
+langchain-text-splitters
+xgboost
+scikit-learn
+pandas
+numpy
+python-dotenv
+chromadb
+pdfplumber
+python-docx

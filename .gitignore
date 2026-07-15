@@ -1,0 +1,12 @@
+node_modules/
+venv/
+__pycache__/
+*.pkl
+*.pyc
+.env
+chroma_db/
+compliance/chroma_db/
+docs/chroma_*
+dist/
+.DS_Store
+firebase-debug.log
