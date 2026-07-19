@@ -1,4 +1,4 @@
-// ─── Realistic mock banking data for all VaultIQ pages ───────────────────────
+// ─── Realistic mock banking data for all Fintel pages ────────────────────────
 // Modelled on actual FDIC call report metrics, FinCEN typologies, and
 // Basel III frameworks for a mid-size US community bank (~$4.2B assets).
 

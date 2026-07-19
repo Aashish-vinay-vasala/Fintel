@@ -218,6 +218,12 @@ Return ONLY valid JSON, no extra text."""
         return {"health_score": 70, "rating": "FAIR", "ewi_count": 0, "early_warnings": [], "loan_analysis": [], "recommendations": [], "summary": response.content}
 
 
+@app.post("/copilot/chat")
+async def copilot_chat(request: dict):
+    from copilot.agent import run_copilot_chat
+    return run_copilot_chat(request)
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("run:app", host="0.0.0.0", port=8080, reload=True)

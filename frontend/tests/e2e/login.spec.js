@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const DEMO_EMAIL    = 'analyst@vaultiq.demo';
+const DEMO_EMAIL    = 'analyst@fintel.demo';
 const DEMO_PASSWORD = 'demo1234';
 
 test.describe('Login Page', () => {
@@ -8,8 +8,8 @@ test.describe('Login Page', () => {
     await page.goto('/login');
   });
 
-  test('renders VaultIQ branding', async ({ page }) => {
-    await expect(page.locator('text=VaultIQ')).toBeVisible();
+  test('renders Fintel branding', async ({ page }) => {
+    await expect(page.locator('text=Fintel')).toBeVisible();
     await expect(page.locator('text=AI Banking Intelligence')).toBeVisible();
   });
 
@@ -27,7 +27,7 @@ test.describe('Login Page', () => {
   test('demo pill fills in email field', async ({ page }) => {
     await page.locator('text=Analyst').click();
     const emailValue = await page.locator('input[type="email"]').inputValue();
-    expect(emailValue).toBe('analyst@vaultiq.demo');
+    expect(emailValue).toBe('analyst@fintel.demo');
   });
 
   test('shows validation error on empty submit', async ({ page }) => {

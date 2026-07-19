@@ -91,7 +91,7 @@ export default function Sidebar() {
         </div>
         <div>
           <div style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:16.5, letterSpacing:'-0.5px', color:'#E0E7FF', lineHeight:1 }}>
-            Vault<span style={{ background:'linear-gradient(135deg,#818CF8,#A78BFA)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>IQ</span>
+            Fin<span style={{ background:'linear-gradient(135deg,#818CF8,#A78BFA)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>tel</span>
           </div>
           <div style={{ fontSize:8, color:'#334155', letterSpacing:'1.2px', marginTop:4, fontWeight:700, textTransform:'uppercase', fontFamily:'var(--font)' }}>
             AI Banking OS

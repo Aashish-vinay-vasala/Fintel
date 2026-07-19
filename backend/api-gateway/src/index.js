@@ -11,6 +11,7 @@ process.env.CREDIT_URL     = AI_URL + "/credit";
 process.env.COMPLIANCE_URL = AI_URL + "/compliance";
 process.env.RISK_URL       = AI_URL + "/risk";
 process.env.DOCS_URL       = AI_URL + "/docs-ai";
+process.env.COPILOT_URL    = AI_URL + "/copilot";
 
 const fraudRoutes      = require("./routes/fraud");
 const creditRoutes     = require("./routes/credit");
@@ -21,6 +22,7 @@ const reportsRoutes    = require("./routes/reports");
 const amlRoutes        = require("./routes/aml");
 const loansRoutes      = require("./routes/loans");
 const evalRoutes       = require("./routes/eval");
+const copilotRoutes    = require("./routes/copilot");
 
 const app = express();
 app.use(cors());
@@ -35,6 +37,7 @@ app.use("/api/reports",    reportsRoutes);
 app.use("/api/aml",        amlRoutes);
 app.use("/api/loans",      loansRoutes);
 app.use("/api/eval",       evalRoutes);
+app.use("/api/copilot",    copilotRoutes);
 
 app.get("/api/health", async (req, res) => {
   const axios = require("axios");

@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 // Helper: log in before dashboard tests
 async function login(page) {
   await page.goto('/login');
-  await page.fill('input[type="email"]',    'analyst@vaultiq.demo');
+  await page.fill('input[type="email"]',    'analyst@fintel.demo');
   await page.fill('input[type="password"]', 'demo1234');
   await page.locator('button[type="submit"]').click();
   await page.waitForURL('/', { timeout: 15000 });
@@ -42,7 +42,7 @@ test.describe('Dashboard', () => {
   });
 
   test('sidebar navigation is visible', async ({ page }) => {
-    await expect(page.locator('text=VaultIQ')).toBeVisible();
+    await expect(page.locator('text=Fintel')).toBeVisible();
     await expect(page.locator('text=Overview')).toBeVisible();
     await expect(page.locator('text=Fraud Intel')).toBeVisible();
     await expect(page.locator('text=Credit Suite')).toBeVisible();

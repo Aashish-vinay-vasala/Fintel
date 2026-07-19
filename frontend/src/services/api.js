@@ -219,6 +219,11 @@ export async function analyzeCollateral(payload) {
   return tryParseJSON(data.answer, { margin_call_risk: 'MEDIUM', assets: [], recommendations: [], summary: data.answer });
 }
 
+// ─── Copilot ───────────────────────────────────────────────────────────────
+export async function copilotChat({ message, page, history, pendingAction, confirm }) {
+  return post('/copilot/chat', { message, page, history, pending_action: pendingAction, confirm });
+}
+
 // ─── Documents ─────────────────────────────────────────────────────────────
 export async function summarizeDocument(file) {
   const fd = new FormData();

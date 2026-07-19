@@ -95,7 +95,7 @@ export default function Login() {
             </div>
             <div>
               <div style={{ fontFamily:'var(--font-display)', fontWeight:800, fontSize:24, letterSpacing:'-0.7px', color:'#E0E7FF', lineHeight:1 }}>
-                Vault<span style={{ background:'linear-gradient(135deg,#818CF8,#A78BFA)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>IQ</span>
+                Fin<span style={{ background:'linear-gradient(135deg,#818CF8,#A78BFA)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent' }}>tel</span>
               </div>
               <div style={{ fontSize:8.5, color:'#1E293B', letterSpacing:'1.4px', marginTop:5, fontWeight:700, textTransform:'uppercase' }}>AI Banking Intelligence</div>
             </div>
@@ -115,9 +115,9 @@ export default function Login() {
             </div>
             <div style={{ display:'flex', gap:8 }}>
               {[
-                { role:'Analyst', email:'analyst@vaultiq.demo', pw:'demo1234' },
-                { role:'Manager', email:'manager@vaultiq.demo', pw:'demo1234' },
-                { role:'Auditor', email:'auditor@vaultiq.demo', pw:'demo1234' },
+                { role:'Analyst', email:'analyst@fintel.demo', pw:'demo1234' },
+                { role:'Manager', email:'manager@fintel.demo', pw:'demo1234' },
+                { role:'Auditor', email:'auditor@fintel.demo', pw:'demo1234' },
               ].map(d => (
                 <button key={d.role} type="button"
                   onClick={() => { setEmail(d.email); setPassword(d.pw); setError(''); }}

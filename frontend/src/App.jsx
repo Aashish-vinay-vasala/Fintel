@@ -20,6 +20,7 @@ import Reports         from './pages/Reports';
 import Documents       from './pages/Documents';
 import Settings        from './pages/Settings';
 import Login           from './pages/Login';
+import CopilotWidget   from './components/CopilotWidget';
 
 function PrivateRoute({ children, session }) {
   return session ? children : <Navigate to="/login" replace />;
@@ -48,6 +49,7 @@ function AppShell() {
           <Route path="/settings"       element={<Settings />} />
         </Routes>
       </div>
+      <CopilotWidget />
     </div>
   );
 }

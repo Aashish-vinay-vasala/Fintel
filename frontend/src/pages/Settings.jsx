@@ -7,7 +7,7 @@ import {
 import PageLayout from '../components/ui/PageLayout';
 
 function getAuth() {
-  try { return JSON.parse(localStorage.getItem('vaultiq_auth') || '{}'); } catch { return {}; }
+  try { return JSON.parse(localStorage.getItem('fintel_auth') || '{}'); } catch { return {}; }
 }
 
 function initials(email) {
@@ -88,7 +88,7 @@ export default function Settings() {
   const [autoAnalyze,  setAutoAnalyze]  = useState(true);
 
   const logout = () => {
-    localStorage.removeItem('vaultiq_auth');
+    localStorage.removeItem('fintel_auth');
     navigate('/login', { replace: true });
   };
 
@@ -151,7 +151,7 @@ export default function Settings() {
         <Section title="System">
           <Row icon={Server} label="AI Service"      sublabel="Groq · llama-3.3-70b-versatile"          right="Connected" />
           <Row icon={Shield}   label="Compliance data" sublabel="BSA · AML · KYC · OFAC · GLBA · FCRA"    right="Live" />
-          <Row icon={CheckCircle} label="Platform version" sublabel="VaultIQ AI Banking OS"               right="v1.0.0" />
+          <Row icon={CheckCircle} label="Platform version" sublabel="Fintel AI Banking OS"               right="v1.0.0" />
         </Section>
 
         {/* Danger zone */}
