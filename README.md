@@ -12,6 +12,16 @@ Each module is powered by a LangGraph agent pipeline backed by Groq's LLaMA 3.3 
 
 ---
 
+## Live Deployment
+
+| Service | URL |
+|---------|-----|
+| **Frontend** | https://fintel-503001.web.app |
+| **API Gateway** | https://api-gateway-270336468447.us-central1.run.app |
+| **AI Services** | https://ai-services-270336468447.us-central1.run.app |
+
+---
+
 ## Modules
 
 | Module | What It Does |
@@ -43,7 +53,7 @@ Each module is powered by a LangGraph agent pipeline backed by Groq's LLaMA 3.3 
 | **Charts** | Recharts + Canvas sparklines |
 | **Icons** | Lucide React |
 | **Mock Data** | `src/data/mockBank.js` — realistic $4.2B community bank data pre-loaded on every page |
-| **Frontend Deploy** | Google Cloud Run |
+| **Frontend Deploy** | Firebase Hosting |
 | **API Gateway** | Node.js + Express |
 | **Gateway Deploy** | Google Cloud Run |
 | **AI Services** | Python + FastAPI + Uvicorn |
@@ -212,22 +222,27 @@ npm run dev                     # → http://localhost:5173
 
 ---
 
-## Deployment (Google Cloud Run)
+## Deployment (Google Cloud Run + Firebase Hosting)
 
 ```bash
-# AI Services
-cd backend/ai-services
-gcloud run deploy fintel-ai --source . --project your-gcp-project --region us-central1 --allow-unauthenticated
+# AI Services → Cloud Run
+gcloud run deploy ai-services --source backend/ai-services --project fintel-503001 --region us-central1 \
+  --allow-unauthenticated --memory 1Gi --timeout 300 \
+  --set-secrets=GROQ_API_KEY=GROQ_API_KEY:latest
 
-# API Gateway
-cd backend/api-gateway
-gcloud run deploy fintel-gateway --source . --project your-gcp-project --region us-central1 --allow-unauthenticated
+# API Gateway → Cloud Run (wired to the ai-services URL above)
+gcloud run deploy api-gateway --source backend/api-gateway --project fintel-503001 --region us-central1 \
+  --allow-unauthenticated \
+  --set-env-vars=AI_URL=https://ai-services-270336468447.us-central1.run.app \
+  --set-secrets=SUPABASE_URL=SUPABASE_URL:latest,SUPABASE_SERVICE_ROLE_KEY=SUPABASE_SERVICE_ROLE_KEY:latest
 
-# Frontend
+# Frontend → Firebase Hosting (wired to the api-gateway URL above via frontend/.env.production.local)
 cd frontend
 npm run build
-gcloud run deploy fintel-frontend --source . --project your-gcp-project --region us-central1 --allow-unauthenticated
+firebase deploy --only hosting --project fintel-503001
 ```
+
+Secrets (`GROQ_API_KEY`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`) live in Google Secret Manager, not plain env vars.
 
 ---
 

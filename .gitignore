@@ -10,3 +10,4 @@ docs/chroma_*
 dist/
 .DS_Store
 firebase-debug.log
+.firebase/
