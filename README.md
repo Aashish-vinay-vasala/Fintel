@@ -27,16 +27,16 @@ Each module is powered by a LangGraph agent pipeline backed by Groq's LLaMA 3.3 
 | Module | What It Does |
 |--------|-------------|
 | **Fraud Intel** | Real-time transaction risk scoring. Inputs: amount, hour, frequency, distance, origin. Outputs: fraud score 0–100, APPROVE/REVIEW/BLOCK decision, behavioral explanation |
-| **Credit Suite** | AI loan underwriting (XGBoost + LangGraph) — approval decision, rate, max loan, risk factors. DSCR calculator for commercial real estate — debt service coverage, LTV, debt yield, approval recommendation |
-| **Risk** | Portfolio stress testing across 4 scenarios (mild recession, severe recession, rate shock, cyber attack). Computes NPA ratio, Tier 1 capital, liquidity, LTD ratio |
+| **Credit Desk** | AI loan underwriting (XGBoost + LangGraph) — approval decision, rate, max loan, risk factors. DSCR calculator for commercial real estate — debt service coverage, LTV, debt yield, approval recommendation |
+| **Risk Console** | Portfolio stress testing across 4 scenarios (mild recession, severe recession, rate shock, cyber attack). Computes NPA ratio, Tier 1 capital, liquidity, LTD ratio |
 | **Loan Monitor** | Real-time portfolio health analysis. Enter portfolio metrics + individual loans. Returns health score, early warning indicators, per-loan MONITOR/WATCH/RESTRUCTURE decisions |
-| **Treasury** | Interest Rate Risk — NIM stress scenarios (+100/+200/+300/-100/-200 bps), duration gap, EaR. Liquidity Coverage Ratio (LCR) calculator — HQLA breakdown, 30-day net outflows, compliance status |
+| **Treasury Desk** | Interest Rate Risk — NIM stress scenarios (+100/+200/+300/-100/-200 bps), duration gap, EaR. Liquidity Coverage Ratio (LCR) calculator — HQLA breakdown, 30-day net outflows, compliance status |
 | **Compliance Hub** | RAG-based regulatory Q&A (BSA, AML, KYC, OFAC, GLBA, FCRA, TILA, CRA). Transaction compliance screening. Regulatory tracker — active regulations, deadlines, impact assessment |
 | **AML Intel** | NLP transaction narrative analysis — entity extraction, AML typology detection (structuring, layering, smurfing, round-tripping). Customer screening against OFAC/PEP/sanctions |
 | **Customer Intel** | Customer 360 profiling — KYC status, behavioral flags, lifetime value, EDD recommendations. Transaction network graph — node/edge mapping, circular flow detection, shell company links |
 | **Risk Assets** | Chargeback Intelligence — dispute classification, win probability, required evidence, Visa/MC reason codes. Collateral Management — haircut analysis, coverage ratio, margin call risk |
 | **Benchmarking** | Peer comparison against FDIC call report data — NIM, ROA, ROE, efficiency ratio, NPL, Tier 1 capital vs. peer median and top quartile |
-| **Model Risk** | AI model governance — validation status, performance drift, back-testing results |
+| **Model Audit** | AI model governance — validation status, performance drift, back-testing results |
 | **Report Studio** | AI-generated banking reports: SAR, CTR, Risk Assessment, Credit Portfolio Summary, Compliance Audit, Board Executive Summary |
 | **Doc AI** | Upload PDF/DOCX/TXT → instant AI summary + conversational Q&A on document content |
 

@@ -9,19 +9,19 @@ import { supabase } from '../../lib/supabase';
 
 const GROUPS = [
   { label: 'Core', items: [
-    { to: '/',      icon: LayoutDashboard, label: 'Overview'    },
+    { to: '/',      icon: LayoutDashboard, label: 'Dashboard'   },
     { to: '/fraud', icon: ShieldAlert,     label: 'Fraud Intel' },
   ]},
   { label: 'Risk & Lending', items: [
-    { to: '/credit-suite', icon: CreditCard, label: 'Credit Suite'  },
-    { to: '/risk',         icon: Activity,   label: 'Risk'          },
+    { to: '/credit-suite', icon: CreditCard, label: 'Credit Desk'   },
+    { to: '/risk',         icon: Activity,   label: 'Risk Console'  },
     { to: '/loans',        icon: Landmark,   label: 'Loan Monitor'  },
-    { to: '/treasury',     icon: TrendingUp, label: 'Treasury'      },
+    { to: '/treasury',     icon: TrendingUp, label: 'Treasury Desk' },
   ]},
   { label: 'Compliance', items: [
     { to: '/compliance-hub', icon: Scale,      label: 'Compliance Hub' },
     { to: '/aml',            icon: ScanSearch, label: 'AML Intel'      },
-    { to: '/model-risk',     icon: Cpu,        label: 'Model Risk'     },
+    { to: '/model-risk',     icon: Cpu,        label: 'Model Audit'    },
   ]},
   { label: 'Intelligence', items: [
     { to: '/customer-intel', icon: Users,    label: 'Customer Intel' },
