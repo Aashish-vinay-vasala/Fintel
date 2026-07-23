@@ -10,6 +10,11 @@ Fintel is an AI-powered banking operating system that brings together multiple i
 
 Each module is powered by a LangGraph agent pipeline backed by Groq's LLaMA 3.3 70B model, with XGBoost ML models for fraud and credit scoring.
 
+<img width="1916" height="903" alt="Screenshot 2026-07-23 014204" src="https://github.com/user-attachments/assets/07744648-f041-4d81-90dd-ce4f18efbddc" />
+<img width="1917" height="902" alt="Screenshot 2026-07-23 014243" src="https://github.com/user-attachments/assets/453c1aee-155e-4b1e-b947-ca9985c25de3" />
+<img width="1916" height="907" alt="Screenshot 2026-07-23 014254" src="https://github.com/user-attachments/assets/aa6d43d7-6a1b-4ff5-afc6-8c7a52c2a5ad" />
+<img width="1917" height="913" alt="Screenshot 2026-07-23 014306" src="https://github.com/user-attachments/assets/cbcef011-21e7-4aed-bf62-78538535d4d8" />
+
 ---
 
 ## Live Deployment
