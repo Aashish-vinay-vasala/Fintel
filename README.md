@@ -14,6 +14,10 @@ Each module is powered by a LangGraph agent pipeline backed by Groq's LLaMA 3.3 
 <img width="1917" height="902" alt="Screenshot 2026-07-23 014243" src="https://github.com/user-attachments/assets/453c1aee-155e-4b1e-b947-ca9985c25de3" />
 <img width="1916" height="907" alt="Screenshot 2026-07-23 014254" src="https://github.com/user-attachments/assets/aa6d43d7-6a1b-4ff5-afc6-8c7a52c2a5ad" />
 <img width="1917" height="913" alt="Screenshot 2026-07-23 014306" src="https://github.com/user-attachments/assets/cbcef011-21e7-4aed-bf62-78538535d4d8" />
+<img width="1916" height="921" alt="Screenshot 2026-07-23 014620" src="https://github.com/user-attachments/assets/24109bf2-ac1e-4576-9830-6f04faa22c4d" />
+<img width="1917" height="901" alt="Screenshot 2026-07-23 014630" src="https://github.com/user-attachments/assets/868a9c83-e1d4-4f4f-a51e-8fd7747a56f5" />
+<img width="1917" height="895" alt="Screenshot 2026-07-23 014640" src="https://github.com/user-attachments/assets/dbf1b27f-2f1b-40df-8434-0a729f751b58" />
+
 
 ---
 
